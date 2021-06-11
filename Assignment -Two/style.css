@@ -4,10 +4,246 @@
   box-sizing: border-box;
 }
 
-body{
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
   font-family: "Rajdhani",sans-serif;
-  margin: 0 0;
-  padding: 0 0;
+}
+
+.nav-grow {
+  display: flex;
+  width: 100%;
+}
+
+.brand_logo {
+  display: flex;
+  justify-content: left;
+  margin: 1rem;
+}
+
+.reg {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.register {
+  font-size: 14px;
+  color: #673eb6;
+  background: transparent;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 3px solid #673eb6;
+  margin: 20px;
+  position: relative;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.register::after {
+  content: "";
+  width: 22px;
+  height: 18px;
+  background: #fff;
+  border: 3px solid #673eb6;
+  transform: rotate(-45deg);
+  position: absolute;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  bottom: -12px;
+  left: -13px;
+}
+
+.register::before {
+  content: "";
+  width: 22px;
+  height: 18px;
+  background: #fff;
+  border: 3px solid #673eb6;
+  transform: rotate(-228deg);
+  position: absolute;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  top: -12px;
+  right: -13px;
+}
+
+.register:hover {
+  background-color: #673eb6;
+  color: #fff;
+}
+
+.menu {
+  margin: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.bg-img {
+  background-image: url(./images/CEAT-Banner_Desktop.jpeg);
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* height: 100%; */
+  padding: 15rem;
+}
+
+.img-group {
+  display: flex;
+  justify-content: center;
+}
+
+.gaming-series {
+  display: flex;
+  position: absolute;
+  width: 22%;
+  height: auto;
+  top: 14vh;
+}
+
+.brandlogo-blue {
+  display: flex;
+  position: absolute;
+  width: 9%;
+  height: auto;
+  top: 24rem;
+  left: 33rem;
+}
+
+.zoink {
+  display: flex;
+  position: absolute;
+  width: 9%;
+  height: auto;
+  top: 24rem;
+  left: 45rem;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.platform-partner-text {
+  display: flex;
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  letter-spacing: 0px;
+  top: 27.5rem;
+  left: 34rem;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+.lifestyle-partner-text{
+  display: flex;
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  letter-spacing: 0px;
+  top: 27.5rem;
+  left: 46rem;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+.playnow{
+  display: flex;
+  justify-content: center;
+}
+
+.play-now-btn {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background: #673eb6;
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 25px;
+  width: 20%;
+  height: 12%;
+  border: 3px solid #673eb6;
+  margin: 20px;
+  position: relative;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: absolute;
+  top: 31.5rem;
+}
+
+.play-now-btn::after {
+  content: "";
+  width: 23px;
+  height: 28px;
+  background: #fff;
+  border: 3px solid #673eb6;
+  transform: rotate(-38deg);
+  position: absolute;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  bottom: -12px;
+  left: -13px;
+}
+
+.play-now-btn::before {
+  content: "";
+  width: 23px;
+  height: 28px;
+  background: #2A398C;
+  border: 3px solid #673eb6;
+  transform: rotate(-223deg);
+  position: absolute;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  top: -12px;
+  right: -13px;
+}
+
+.play-now-btn:hover{
+  background: #7448c5;
+  border: 3px solid #7448c5;
+}
+
+.play-now-btn::before{
+  border: 3px solid #673eb6;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.play-now-btn::after{
+  border: 3px solid #673eb6;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
 }
 
 
@@ -37,14 +273,14 @@ body{
     height: 140px;
     clip-path: 
     polygon(
-      0% 0px,                 /* top left */
-      20px 0%,                 /* top left */
-      calc(100% - 20px) 0%,    /* top right */
-      100% 25px,               /* top right */
-      100% calc(100% + 20px),  /* bottom right */
-      calc(100% - 20px) 100%,  /* bottom right */
-      20px 100%,               /* bottom left */
-      0 calc(100% - 20px)      /* bottom left */
+      0% 0px,                 
+      20px 0%,                 
+      calc(100% - 20px) 0%,   
+      100% 25px,               
+      100% calc(100% + 20px),  
+      calc(100% - 20px) 100%,  
+      20px 100%,               
+      0 calc(100% - 20px)      
     );
 }
 
@@ -54,14 +290,14 @@ body{
     height: 200px;
     clip-path: 
     polygon(
-      0% 0px,                 /* top left */
-      20px 0%,                 /* top left */
-      calc(100% - 20px) 0%,    /* top right */
-      100% 25px,               /* top right */
-      100% calc(100% + 20px),  /* bottom right */
-      calc(100% - 20px) 100%,  /* bottom right  #6F25FF; */
-      20px 100%,               /* bottom left */
-      0 calc(100% - 20px)      /* bottom left */
+      0% 0px,                 
+      20px 0%,                 
+      calc(100% - 20px) 0%,    
+      100% 25px,               
+      100% calc(100% + 20px),  
+      calc(100% - 20px) 100%,  
+      20px 100%,              
+      0 calc(100% - 20px)      
     );
 }
 
